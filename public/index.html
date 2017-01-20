@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper purple darken-1">
+            <a href="#" class="brand-logo" id="logo">Build your Budget</a>
+        </div>
+    </nav>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col s12">
+                <table id="category-list">
+                    <thead>
+                        <tr>
+                            <th> Category </th>
+                            <th> Amount </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Create category block-->
+        <div id="budgetItems" class="row">
+            <div class="col s6">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="categoryName" type="text" class="validate">
+                        <label for="categoryName" id="categoryLabel" class="active">Category Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="categoryAmount" type="text" class="validate">
+                        <label for="last_name" id="amountLabel" class="active">Amount</label>
+                    </div>
+                    <button id="submit" class="waves-effect waves-light btn purple darken-1">Create Category</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s3">
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title stocks">Stocks</span>
+                        <p id="vti" class="stocks"></p>
+                        <!-- <p id="vxus" class="stocks"></p> -->
+                    </div>
+                    <div class="card-action">
+                        <a href="http://www.nasdaq.com/symbol/vti" target="_blank" id="vtiUrl">More about VTI</a>
+                        <!-- <a href="http://www.nasdaq.com/symbol/vxus" target="_blank">VXUS</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s3">
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title stocks">Stocks</span>
+                        <!-- <p id="vti" class="stocks"></p> -->
+                        <p id="vxus" class="stocks"></p>
+                    </div>
+                    <div class="card-action">
+                        <!-- <a href="http://www.nasdaq.com/symbol/vti" target="_blank" id="vtiUrl">More about VTI</a> -->
+                        <a href="http://www.nasdaq.com/symbol/vxus" target="_blank">More about VXUS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Modal Structure -->
+    <div id="edit-category-modal" class="modal">
+        <div class="modal-content">
+            <input id="edit-category-title" type="text" value="">
+            <input id="edit-category-amount" type="text" value="">
+        </div>
+        <div class="modal-footer">
+            <a id="category-update" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAPcvHgK9Nk1RtwXynm-XHJJ846EuYb_3E",
+            authDomain: "budget-68d5a.firebaseapp.com",
+            databaseURL: "https://budget-68d5a.firebaseio.com",
+            storageBucket: "budget-68d5a.appspot.com",
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

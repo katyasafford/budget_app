@@ -1,0 +1,25 @@
+#logo {
+  padding-left: 1%;
+}
+
+.stocks, #vti, #vxus, #category-list {
+  color: #808080;
+}
+
+.stocks {
+  display: block;
+}
+
+#vti, #vxus {
+  display: inline-block;
+}
+
+/* label focus color */
+  #categoryName:focus + #categoryLabel, #categoryAmount:focus + #amountLabel {
+    color: #8e24aa;
+}
+/* label underline focus color */
+  #categoryName:focus, #categoryAmount:focus, #categoryName, #categoryAmount {
+    border-bottom: 1px solid #8e24aa;
+    box-shadow: 0 1px 0 0 #8e24aa;
+  }
